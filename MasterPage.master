@@ -1,0 +1,276 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+
+/*
+ * DO NOT EDIT * General grid scheme
+ */
+div.grid1       { width:  9.17%; }
+div.grid2       { width: 19.26%; }
+div.grid3       { width: 29.32%; }
+div.grid4       { width: 39.44%; }
+div.grid5       { width: 49.54%; }
+div.grid6       { width: 59.63%; }
+div.grid7       { width: 69.72%; }
+div.grid8       { width: 79.81%; }
+div.grid9       { width: 89.90%; }
+div.grid10      { width: 100%; }
+div.grid1, div.grid2 , div.grid3, div.grid4, div.grid5, div.grid6, div.grid7, div.grid8, div.grid9, div.grid10 { 
+        float: left; display: inline; margin-left: 0.9%;
+}   
+div.first { margin-left: 0; }    
+
+h2, h3, h4
+{
+   border-style: solid;
+   border-top-width: 0.5em;
+   border-top-color: white;
+   border-right-style: solid;
+   border-right-width: 0.5em;
+   border-right-color: white;
+   border-bottom-style: solid;
+   border-bottom-width: 0.5em;
+   border-bottom-color: white;
+   border-left-style: solid;
+   border-left-width: 0.5em;
+   border-left-color: white;
+   text-align:center;
+  
+}
+
+
+
+h1 {
+	text-align:center;
+	font-size:40px;
+}
+
+
+
+
+
+
+
+body {
+background-color: silver;	
+background-image: URL('../images/backgroundimage/2.jpg');	
+
+} 
+
+
+
+p{
+	font-size:17px;
+}
+
+
+
+
+
+
+
+#header {  
+   background-color: #781351 ; color: white; 
+   border: groove 2px white; border-radius: 20px;  
+   padding: 1em; 
+   width: 98% 
+  
+}
+
+#main_nav {
+   border: solid 1px white;
+   border-radius: .5em;
+   margin: 0 0.25em 0 0;
+   padding: 0 0.5em 1.5em 0.5em;
+   background-color: #999999; 
+   width: 88% 
+}
+#main_nav ul {
+   margin: 0;
+   padding: 0;
+}
+#main_nav li {
+   list-style: none;
+}
+#main_nav a {
+   display: block;
+   padding: 1em;
+   text-decoration: none;
+   border-bottom: solid 1px white;
+   font-size:18px;
+   
+}
+
+
+#main_nav a:hover {
+   border-bottom: solid 1px blue;
+
+}
+#main_nav a.selected {
+   font-weight: bold;
+   
+}
+
+#content { 
+   border: solid 1px #e1e1e1; 
+   border-radius: 0.5em; 
+   min-height: 400px;
+    font-family: verdana,helvetica,arial,sans-serif; 
+   font-size: 12px; 
+    background-color: #781351 ; 
+    width: 98%; 
+} 
+#content *.tip { 
+   border: solid 1px #ffa20f; 
+   border-radius: 0.5em; 
+   margin: 1em; 
+   padding: 1em; 
+   background-color: #999999; 
+   text-align:center;
+   
+} 
+#content *.tip li { 
+   margin-left: 1em; 
+   
+} 
+#content div.exercise { 
+   margin: 1em; 
+   padding: 1em; 
+   border: solid 1px green; 
+   border-radius: 7px; 
+   background-color: orange; 
+} 
+#content *.code { 
+   border: 2px solid #E1E1E1; 
+   border-radius: 7px 7px 7px 7px; 
+   padding: 1em; 
+   margin: 1em; 
+   background-color: #999999; 
+   text-align: center
+   
+} 
+#content *.tip:hover,  
+#content *.code:hover  
+{ 
+   background: #f5f5f5; 
+}
+
+
+#footer {  
+   background-color: #781351 ; color: white; 
+   border: groove 2px white; border-radius: 20px;  
+   padding: 1em; 
+   width: 98% 
+}
+
+div#content tbody td { 
+   background-color: #ccc; 
+   }
+div#content tbody th { 
+   background-color: #999; 
+   }
+div#content tbody tr.odd td { 
+   background-color: #eee; 
+   }
+div#content tbody tr.odd th { 
+   background-color: #ccc; 
+   } 
+
+div#content table, div#content td, div#content th {
+    border: 1px solid gray; 
+    border-collapse: collapse;
+    margin: 0; padding: 0.5em;
+    
+   }
+    </style>
+</head>
+<body>
+  
+   
+      
+
+
+   
+         
+
+      	<div id="container"> 
+   			
+   			<div class="grid10 first" id="header">
+         		<h1>ASP.NET WEBSITE</h1>
+         	</div>
+      			
+
+   				  <!-- 1 column row - content and navigation columns -->
+   				  <div class="grid2 first">
+         <!-- left column -->
+         <div id="side_column">
+            <div id="main_nav">
+                <ul>
+					<li id="Login"><a href="login.aspx">Login</a></li>
+				
+				</ul>
+              
+				
+            </div>
+         </div>
+      </div>
+	  
+      <div class="grid8">	
+         <!-- right column -->
+         <div id="content">
+              
+          <p class="tip">!!!!!Title asp.net</p>
+           
+      
+              
+              
+            <div class="code">
+			
+			
+			 <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+
+    </div>
+              
+        
+             
+            </div> 
+             
+            </div> 
+         </div>
+      </div>
+   				
+   				
+   				
+   		
+				
+	
+     
+         <!-- footer row -->
+      <div class="grid10 first" id="footer">
+          <h1>ASP.NET WEBSITE</h1>
+      </div>
+        
+        
+        
+
+      
+ 
+         
+
+   
+</body>
+</html>
+
+
+
